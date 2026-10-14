@@ -23,9 +23,22 @@ object ShizukuHelper {
 
     fun exec(cmd: String): String {
         return try {
-            val process = Shizuku.newProcess(
-                arrayOf("sh", "-c", cmd), null, null
+            val shizukuClass = Class.forName("rikka.shizuku.Shizuku")
+            val method = shizukuClass.getDeclaredMethod(
+                "newProcess",
+                Array<String>::class.java,
+                Array<String>::class.java,
+                String::class.java
             )
+            method.isAccessible = true
+
+            val process = method.invoke(
+                null,
+                arrayOf("sh", "-c", cmd),
+                null,
+                null
+            ) as java.lang.Process
+
             val out = process.inputStream.bufferedReader().readText()
             process.waitFor()
             out.trim()
