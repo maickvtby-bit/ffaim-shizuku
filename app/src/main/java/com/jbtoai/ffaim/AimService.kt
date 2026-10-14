@@ -62,7 +62,7 @@ class AimService : Service() {
         fireThread = Thread {
             while (isFiring) {
                 ShizukuHelper.exec("input tap $fireBtnX $fireBtnY")
-                Thread.sleep(60)
+                Thread.sleep(200)
             }
         }.also { it.start() }
     }
