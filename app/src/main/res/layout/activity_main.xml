@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FF Aim Assist — Shizuku"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingBottom="20dp"/>
+
+    <TextView android:id="@+id/txtShizuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="#11000000"
+        android:textSize="14sp"
+        android:paddingBottom="16dp"/>
+
+    <Button android:id="@+id/btnShizuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Xin quyền Shizuku"/>
+
+    <Button android:id="@+id/btnOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Cấp quyền overlay"/>
+
+    <Button android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Bật aim assist"/>
+
+    <Button android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tắt"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:textSize="13sp"
+        android:text="Sau khi bật:&#10;• Crosshair cao — aim đầu&#10;• RECOIL — kéo tâm bù giật (bấm khi xả)&#10;• FIRE — bắn liên tục&#10;• SCOPE — quick scope (sniper)&#10;• SNAP — kéo tâm tới điểm chạm&#10;• X — tắt khẩn cấp"/>
+</LinearLayout>
+</ScrollView>
